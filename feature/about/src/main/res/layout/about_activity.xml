@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center_vertical"
+	android:orientation="vertical"
+	tools:context=".AboutActivity"
+	>
+
+	<ImageView
+		android:id="@+id/about$icon"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		tools:src="@android:drawable/sym_def_app_icon"
+		/>
+
+	<TextView
+		android:id="@+id/about$name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textIsSelectable="true"
+		tools:text="My Application"
+		/>
+
+	<TextView
+		android:id="@+id/about$version"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textIsSelectable="true"
+		tools:text="1.0.0"
+		/>
+
+</LinearLayout>
