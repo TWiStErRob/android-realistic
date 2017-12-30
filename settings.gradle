@@ -5,16 +5,8 @@ include ':feature:base'
 include ':core'
 
 // [build-src-hack] future-proof version of the hack that doesn't need to maintain a buildSrc sub-project list
-def buildSrc = file('buildSrc').toPath()
-def buildSrcSubProjects = fileTree(buildSrc) {
-	// find all build.gradle files, except the listed ones
-	include '**/build.gradle'
-	exclude '/build.gradle'
-	exclude '/assemble-hack/build.gradle'
-}.files*.parentFile*.toPath().collect { ':' + buildSrc.relativize( it ).join(':') }
-buildSrcSubProjects.each {
-	// `include ':foo:bar'` defines an alias for a subproject
-	include it
-	// and then it is referable via project() so we can set which folder is the subproject.
-	project(it).projectDir = file('buildSrc/assemble-hack')
+def subProjects = rootProject.children.collect()
+apply from: 'buildSrc/settings.gradle'
+(rootProject.children - subProjects).each {
+	it.projectDir = file('buildSrc/assemble-hack')
 }
