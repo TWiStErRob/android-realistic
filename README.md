@@ -70,8 +70,8 @@ Resolving any of these in a nice way is very welcome!
     > * What went wrong:
     > Project 'class-gen' not found in root project 'real'.
     > ```
-    `[build-src-hack]` To work around this error I included the `buildSrc` modules in the `rootProject`'s `settings.gradle` and relocated their source code. This lets AS run the `*:assemble` task to its heart content, it should be always `UP-TO-DATE` after first build, because it rarely changes.
-    TODO report this on https://b.android.com
+    `[build-src-hack]` https://issuetracker.google.com/issues/71422483
+    To work around this error I included the `buildSrc` modules in the `rootProject`'s `settings.gradle` and relocated their source code. This lets AS run the `*:assemble` task to its heart content, it should be always `UP-TO-DATE` after first build, because it rarely changes.
 
 ## Aspect References
  * `[multidex]` https://developer.android.com/studio/build/multidex.html  

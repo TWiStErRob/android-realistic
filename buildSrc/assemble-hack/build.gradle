@@ -1,0 +1,3 @@
+// [build-src-hack] satisfy Android Studio's expected contract by providing an :assemble task.
+// see rootProject/settings.gradle for how this is used.
+task assemble {}

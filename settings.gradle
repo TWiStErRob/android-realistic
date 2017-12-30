@@ -4,9 +4,17 @@ include ':feature:main'
 include ':feature:base'
 include ':core'
 
-// [build-src-hack] `include ':foo'` defines an alias for a subproject,
-// and then it is referable via project() and we can set which folder actually contains the files.
-include ':class-gen'
-project(':class-gen').projectDir = file('buildSrc/class-gen') 
-include ':class-gen-tasks'
-project(':class-gen-tasks').projectDir = file('buildSrc/class-gen-tasks')
+// [build-src-hack] future-proof version of the hack that doesn't need to maintain a buildSrc sub-project list
+def buildSrc = file('buildSrc').toPath()
+def buildSrcSubProjects = fileTree(buildSrc) {
+	// find all build.gradle files, except the listed ones
+	include '**/build.gradle'
+	exclude '/build.gradle'
+	exclude '/assemble-hack/build.gradle'
+}.files*.parentFile*.toPath().collect { ':' + buildSrc.relativize( it ).join(':') }
+buildSrcSubProjects.each {
+	// `include ':foo:bar'` defines an alias for a subproject
+	include it
+	// and then it is referable via project() so we can set which folder is the subproject.
+	project(it).projectDir = file('buildSrc/assemble-hack')
+}
