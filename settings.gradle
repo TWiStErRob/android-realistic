@@ -7,6 +7,7 @@ include ':core'
 // [build-src-hack] future-proof version of the hack that doesn't need to maintain a buildSrc sub-project list
 def subProjects = rootProject.children.collect()
 apply from: 'buildSrc/settings.gradle'
+def emptyAssemble = file('buildSrc/assemble-hack.gradle').toPath()
 (rootProject.children - subProjects).each {
-	it.projectDir = file('buildSrc/assemble-hack')
+	it.buildFileName = it.projectDir.toPath().relativize(emptyAssemble)
 }
