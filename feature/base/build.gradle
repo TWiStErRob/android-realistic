@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+apply from: "${rootDir}/gradle/android-versions.gradle"
+
+dependencies {
+	api project(':core')
+	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
+}

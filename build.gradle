@@ -1,0 +1,19 @@
+buildscript {
+	repositories {
+		// everything else
+		jcenter() // Search: https://bintray.com/bintray/jcenter
+		// https://developer.android.com/studio/build/dependencies.html#google-maven
+		google() // Browse: https://maven.google.com
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:3.0.1'
+	}
+}
+
+subprojects {
+	repositories {
+		// global repo for most things
+		jcenter()
+		google()
+	}
+}

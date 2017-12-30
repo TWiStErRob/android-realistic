@@ -1,0 +1,6 @@
+include ':app'
+include ':feature:about', ':feature:about-contract'
+include ':feature:main'
+include ':feature'
+include ':feature:base'
+include ':core'

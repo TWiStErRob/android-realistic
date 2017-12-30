@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+apply from: "${rootDir}/gradle/android-versions.gradle"
+
+android {
+	defaultConfig {
+		applicationId "net.twisterrob.real"
+		versionCode 1
+		versionName "1.0"
+	}
+	buildTypes {
+		debug {
+			applicationIdSuffix ".debug"
+		}
+	}
+}
+
+dependencies {
+
+	compileOnly project(':feature:base')
+	implementation project(':feature:about')
+	implementation project(':feature:main')
+
+	// TODO
+//	implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
+//	annotationProcessor "com.jakewharton:butterknife-compiler:${VERSION_BUTTERKNIFE}"
+//
+//	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
+//	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+//	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
+//	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
+//	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
+}
