@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply from: "${rootDir}/gradle/android-versions.gradle"
+apply from: rootProject.file('gradle/android-versions.gradle')
 
 dependencies {
 	implementation project(':feature:base')

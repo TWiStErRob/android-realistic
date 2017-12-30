@@ -1,12 +1,12 @@
 android {
 	defaultConfig {
-		minSdkVersion 15
-		targetSdkVersion 26
-		compileSdkVersion 26
-		buildToolsVersion '26.0.2'
+		minSdkVersion VERSION_SDK_MIN as int
+		targetSdkVersion VERSION_SDK_TARGET as int
+		compileSdkVersion VERSION_SDK_COMPILE as int
+		buildToolsVersion VERSION_SDK_BUILD as String
 	}
 	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
+		sourceCompatibility VERSION_JAVA as String
+		targetCompatibility VERSION_JAVA as String
 	}
 }

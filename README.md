@@ -32,8 +32,8 @@ See the *Glossary* and *FAQ* if something is not clear.
 
 Everything is latest stable, no preview versions, unless absolutely gives a benefit.
 
- * Developed on Android Studio 3.0.1
- * Library, plugin, etc. versions, see `gradle.properties`, `android-versions.gradle`, and `gradle-wrapper.properties`
+ * Developed on Android Studio 3.0.1 and Gradle 4.2.1 (`gradle-wrapper.properties`)
+ * SDK, language, tooling, plugin, library, etc. versions, see `gradle.properties`
 
 ## Decisions
 
