@@ -1,0 +1,21 @@
+apply plugin: 'groovy' // [build-src]
+// [build-test] adds testCompileOnly gradleTestKit()
+// [build-test] makes GradleRunner.withPluginClasspath() pick up dependencies
+apply plugin: 'java-gradle-plugin'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compileOnly localGroovy() // [build-src]
+	compileOnly gradleApi() // [build-src]
+
+	// [big-gen] separate the implementation from the Gradle task (to demonstrate how to wrap a lib in Gradle)
+	implementation project(':class-gen')
+
+	// [build-test] framework to gradleTestKit tests
+	testImplementation 'junit:junit:4.12'
+	// @Language annotation to inject Gradle into Groovy """ strings
+	testCompileOnly 'org.jetbrains:annotations:15.0'
+}

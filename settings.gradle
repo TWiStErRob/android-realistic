@@ -4,3 +4,10 @@ include ':feature:main'
 include ':feature'
 include ':feature:base'
 include ':core'
+
+// [build-src-hack] `include ':foo'` defines an alias for a subproject,
+// and then it is referable via project() and we can set which folder actually contains the files.
+include ':class-gen'
+project(':class-gen').projectDir = file('buildSrc/class-gen') 
+include ':class-gen-tasks'
+project(':class-gen-tasks').projectDir = file('buildSrc/class-gen-tasks')

@@ -1,6 +1,50 @@
-/.gradle/
-/local.properties
+# .gitignore grammar crash course:
+# leading hashmark: comment
+# *, ** and / work as usual
+# trailing slash (/) forces folders
+# no leading slash (/) means all of them recursively
+# leading dash (-) means "except"
+
+
+# Generic
+temp/
+
+
+# Gradle
+
+# Ignore Gradle's bookkeeping folder
+.gradle/
+# Ignore Gradle's output folders
 build/
-**/*.iml
+
+
+# IntelliJ IDEA / Android Studio
+
+# Project / module / workspace files
+# Most of these are machine-private and most are touched/re-generated
+# on IDEA launch via Gradle sync, so there's no point in sharing them in VCS.
+*.iml
+*.ipr
+*.iws
+
+# [share-ide] exclude all files under the .idea
 /.idea/*
+# [share-ide] but allow these to be commited
+-/.idea/codeStyleSettings.xml
 -/.idea/inspectionProfiles/
+-/.idea/runConfigurations/
+-/.idea/fileTemplates/
+/buildSrc/.idea/
+
+
+# Android
+
+# Android SDK legacy weirdness
+/local.properties
+/buildSrc/local.properties
+
+
+# Project specific
+
+# [big-gen] ignore output of buildSrc generated classes, it'll be regenerated on build
+/app/libs/BigClasses.jar

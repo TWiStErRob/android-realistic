@@ -1,0 +1,12 @@
+// [big-gen] implementation of a library that we want to use from our Gradle build scripts
+
+apply plugin: 'java'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	// [build-test] test our library
+	testImplementation 'junit:junit:4.12'
+}

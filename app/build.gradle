@@ -6,6 +6,8 @@ android {
 		applicationId "net.twisterrob.real"
 		versionCode 1
 		versionName "1.0"
+
+		multiDexEnabled true // [multidex]
 	}
 	buildTypes {
 		debug {
@@ -19,6 +21,8 @@ dependencies {
 	compileOnly project(':feature:base')
 	implementation project(':feature:about')
 	implementation project(':feature:main')
+	implementation fileTree(dir: 'libs', include: '*.jar')
+	implementation 'com.android.support:multidex:1.0.2' // [multidex]
 
 	// TODO
 //	implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
@@ -29,4 +33,13 @@ dependencies {
 //	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
 //	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
 //	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
+}
+
+// [big-gen] add task and specify where to put the .jar file
+//noinspection UnnecessaryQualifiedReference inline for self-containedness
+task('packageBigClasses', type: net.twisterrob.real.gradle.GenerateBigClasses) {
+	preBuild.dependsOn it
+	destinationDir file('libs')
+	packageName 'net.twisterrob.real.gen'
+	baseName 'BigClasses'
 }

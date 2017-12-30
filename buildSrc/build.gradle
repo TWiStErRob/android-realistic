@@ -1,0 +1,9 @@
+// [build-src] copied the default configuration manually to make standalone editing behave the same way as buildSrc
+apply plugin: 'groovy' // [build-src]
+dependencies {
+	compileOnly gradleApi() // [build-src]
+	compileOnly localGroovy() // [build-src]
+	
+	// [build-src] need to export some subprojects so that they're available as buildscript.dependencies.classpath
+	runtimeOnly project(':class-gen-tasks') // [big-gen]
+}
