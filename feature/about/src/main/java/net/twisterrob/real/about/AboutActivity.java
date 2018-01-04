@@ -24,7 +24,12 @@ public class AboutActivity extends AppCompatActivity {
 		setContentView(R.layout.about_activity);
 
 		ButterKnife.bind(this);
-		DaggerAboutComponent.builder().rootView(root).build().inject(this);
-		presenter.bind(getApplicationContext());
+		DaggerAboutComponent
+				.builder()
+				.context(getApplicationContext())
+				.rootView(root)
+				.build()
+				.inject(this);
+		presenter.bind();
 	}
 }

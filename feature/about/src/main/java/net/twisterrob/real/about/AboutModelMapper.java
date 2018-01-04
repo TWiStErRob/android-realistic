@@ -1,32 +1,31 @@
 package net.twisterrob.real.about;
 
+import java.util.Locale;
+
 import javax.inject.Inject;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.support.annotation.NonNull;
 
 public class AboutModelMapper {
 
-	@Inject
-	public AboutModelMapper() {}
+	private final @NonNull Graphics graphics;
 
-	public AboutModel createAbout(Context context) {
+	@Inject
+	public AboutModelMapper(@NonNull Graphics graphics) {this.graphics = graphics;}
+
+	public AboutModel createAbout(AboutDomain about) {
 		return new AboutModel(
-				context.getString(context.getApplicationInfo().labelRes),
-				getVersionName(context),
-				context.getApplicationInfo().icon
+				getVersionName(about),
+				about.applicationId,
+				graphics.getDrawableId(about.applicationIconRes)
 		);
 	}
 
-	private static String getVersionName(Context context) {
-		String applicationId = context.getPackageName();
-		try {
-			PackageInfo pInfo = context.getPackageManager().getPackageInfo(applicationId, 0);
-			return applicationId + ":" + pInfo.versionName;
-		} catch (NameNotFoundException e) {
-			e.printStackTrace();
-			return applicationId;
+	private @NonNull String getVersionName(@NonNull AboutDomain about) {
+		if (AboutDomain.MISSING_VERSION.equals(about.applicationVersionName)) {
+			return about.applicationName;
+		} else {
+			return String.format(Locale.ROOT, "%s %s", about.applicationName, about.applicationVersionName);
 		}
 	}
 }

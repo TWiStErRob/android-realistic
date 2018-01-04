@@ -1,5 +1,6 @@
 package net.twisterrob.real.about;
 
+import android.content.Context;
 import android.view.View;
 
 import dagger.BindsInstance;
@@ -12,6 +13,9 @@ public interface AboutComponent {
 
 	@Component.Builder 
 	interface Builder {
+
+		@BindsInstance
+		Builder context(Context context);
 
 		@BindsInstance
 		Builder rootView(View root);
