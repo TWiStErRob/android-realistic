@@ -17,8 +17,8 @@
         </option>
         <option name="PREFER_LONGER_NAMES" value="false" />
         <option name="INSERT_INNER_CLASS_IMPORTS" value="true" />
-        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="2" />
-        <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1" />
+        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="100" />
+        <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="100" />
         <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
           <value />
         </option>
@@ -186,8 +186,7 @@
           <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
           <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
           <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
-          <option name="BLANK_LINES_AROUND_METHOD" value="0" />
-          <option name="BLANK_LINES_AROUND_METHOD_IN_INTERFACE" value="0" />
+          <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
           <option name="ALIGN_MULTILINE_CHAINED_METHODS" value="true" />
           <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
           <option name="ALIGN_MULTILINE_ASSIGNMENT" value="true" />
@@ -208,6 +207,9 @@
           <option name="BINARY_OPERATION_SIGN_ON_NEXT_LINE" value="true" />
           <option name="TERNARY_OPERATION_WRAP" value="1" />
           <option name="TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value="true" />
+          <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+          <option name="KEEP_SIMPLE_LAMBDAS_IN_ONE_LINE" value="true" />
+          <option name="KEEP_SIMPLE_CLASSES_IN_ONE_LINE" value="true" />
           <option name="ARRAY_INITIALIZER_WRAP" value="1" />
           <option name="ASSIGNMENT_WRAP" value="1" />
           <option name="ASSERT_STATEMENT_WRAP" value="1" />
@@ -219,11 +221,28 @@
           <option name="METHOD_ANNOTATION_WRAP" value="0" />
           <option name="CLASS_ANNOTATION_WRAP" value="0" />
           <option name="FIELD_ANNOTATION_WRAP" value="0" />
+          <option name="VARIABLE_ANNOTATION_WRAP" value="1" />
           <option name="ENUM_CONSTANTS_WRAP" value="2" />
           <indentOptions>
             <option name="USE_TAB_CHARACTER" value="true" />
             <option name="SMART_TABS" value="true" />
           </indentOptions>
+          <arrangement>
+            <groups>
+              <group>
+                <type>GETTERS_AND_SETTERS</type>
+                <order>KEEP</order>
+              </group>
+              <group>
+                <type>OVERRIDDEN_METHODS</type>
+                <order>KEEP</order>
+              </group>
+              <group>
+                <type>DEPENDENT_METHODS</type>
+                <order>DEPTH_FIRST</order>
+              </group>
+            </groups>
+          </arrangement>
         </codeStyleSettings>
         <codeStyleSettings language="JSON">
           <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
@@ -794,6 +813,5 @@
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="TWiStErRob" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package net.twisterrob.real.about;
 
-import android.support.annotation.*;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
 
 public class AboutModel {
 

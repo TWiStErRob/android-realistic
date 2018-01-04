@@ -1,10 +1,15 @@
 package net.twisterrob.real.about;
 
+import javax.inject.Inject;
+
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 
 public class AboutModelMapper {
+
+	@Inject
+	public AboutModelMapper() {}
 
 	public AboutModel createAbout(Context context) {
 		return new AboutModel(
