@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
-apply from: rootProject.file('gradle/android-versions.gradle')
+apply from: rootProject.file('gradle/android-setup.gradle')
 
 dependencies {
 	implementation project(':feature:base')

@@ -4,6 +4,8 @@ android {
 		targetSdkVersion VERSION_SDK_TARGET as int
 		compileSdkVersion VERSION_SDK_COMPILE as int
 		buildToolsVersion VERSION_SDK_BUILD as String
+
+		vectorDrawables.useSupportLibrary = true // [vector]
 	}
 	compileOptions {
 		sourceCompatibility VERSION_JAVA as String

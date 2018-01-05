@@ -99,6 +99,9 @@ Resolving any of these in a nice way is very welcome!
  * `[arch]` TODO MVP, Clean architecture
  * `[di]` TODO Dagger, ButterKnife
  * `[nav]` TODO `ScreenFactory` + `Navigator`
+ * `[vector]` TODO appcompat, SVG conversion
+ * `[version]` gradle.properties + `"...${}"`
+ * `[build-share]` android-setup.gradle
     
 
 ## Glossary
