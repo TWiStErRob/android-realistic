@@ -1,16 +1,19 @@
 package net.twisterrob.real.about;
 
-import android.content.*;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.support.annotation.NonNull;
 
 public class AboutNavigator {
 
-	private final Context context;
+	private final @NonNull Context context;
 
-	public AboutNavigator(Context context) {
+	public AboutNavigator(@NonNull Context context) {
 		this.context = context;
 	}
 
-	public Intent launch() {
+	public @NonNull Intent launch() {
 		return new Intent().setComponent(new ComponentName(context, "net.twisterrob.real.about.AboutActivity"));
 	}
 }

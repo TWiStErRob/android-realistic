@@ -4,4 +4,6 @@ apply from: rootProject.file('gradle/android-versions.gradle')
 dependencies {
 	// These annotations will be used by every module, so publish them
 	api "com.android.support:support-annotations:${VERSION_SUPPORT}"
+	// Added only to make Dagger generated code compile (i.e. not show up as error in IDEA)
+	api 'javax.annotation:jsr250-api:1.0'
 }
