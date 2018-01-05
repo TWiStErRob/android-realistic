@@ -96,6 +96,9 @@ Resolving any of these in a nice way is very welcome!
    * To enable developing `buildSrc` in IDEA, import `buildSrc/build.gradle` as a separate standalone project.
      Developing as a standalone project enables more control, and faster iteration. Running JUnit tests are tricky when not editing buildSrc as a standalone project, so it's suggested to import it in a separate window.
      IDEA supports developing inline (as a module) as well, but build errors may be hard to figure out since any Gradle task executed from the IDE will need to build `buildSrc` first: chicken and egg. See also `[build-src-hack]`.
+ * `[arch]` TODO MVP, Clean architecture
+ * `[di]` TODO Dagger, ButterKnife
+ * `[nav]` TODO `ScreenFactory` + `Navigator`
     
 
 ## Glossary
