@@ -1,3 +1,3 @@
 // [build-src] This file is required to prevent Gradle from going up to root project level when importing `buildSrc` as standalone project.
 
-include 'class-gen', 'class-gen-tasks'
+//include 'class-gen', 'class-gen-tasks'

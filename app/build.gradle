@@ -36,9 +36,9 @@ dependencies {
 
 // [big-gen] add task and specify where to put the .jar file
 //noinspection UnnecessaryQualifiedReference inline for self-containedness
-task('packageBigClasses', type: net.twisterrob.real.gradle.GenerateBigClasses) {
-	preBuild.dependsOn it
-	destinationDir file('libs')
-	packageName 'net.twisterrob.real.gen'
-	baseName 'BigClasses'
-}
+//task('packageBigClasses', type: net.twisterrob.real.gradle.GenerateBigClasses) {
+//	preBuild.dependsOn it
+//	destinationDir file('libs')
+//	packageName 'net.twisterrob.real.gen'
+//	baseName 'BigClasses'
+//}
