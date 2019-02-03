@@ -29,11 +29,12 @@ build/
 
 # [share-ide] exclude all files under the .idea
 /.idea/*
-# [share-ide] but allow these to be commited
--/.idea/codeStyleSettings.xml
+# [share-ide] but allow these to be commited (IntelliJ 2018.x)
+-/.idea/codeStyles/
 -/.idea/inspectionProfiles/
 -/.idea/runConfigurations/
 -/.idea/fileTemplates/
+-/.idea/copyright/
 /buildSrc/.idea/
 
 
