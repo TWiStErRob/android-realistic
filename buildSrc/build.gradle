@@ -5,5 +5,5 @@ dependencies {
 	compileOnly localGroovy() // [build-src]
 	
 	// [build-src] need to export some subprojects so that they're available as buildscript.dependencies.classpath
-	runtimeOnly project(':class-gen-tasks') // [big-gen]
+	//runtimeOnly project(':class-gen-tasks') // [big-gen]
 }
