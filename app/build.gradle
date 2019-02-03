@@ -22,7 +22,7 @@ dependencies {
 	implementation project(':feature:about')
 	implementation project(':feature:main')
 	implementation fileTree(dir: 'libs', include: '*.jar')
-	implementation 'com.android.support:multidex:1.0.2' // [multidex]
+	implementation "com.android.support:multidex:${VERSION_MULTIDEX}" // [multidex]
 	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
 	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"

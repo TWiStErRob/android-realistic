@@ -54,7 +54,7 @@ class GenerateBigClassesTest {
 		assert result.output.contains('Missing packageName')
 	}
 
-	@Test void "successful build generates .jar with expected files"() {
+	@Test void "successful build generates jar with expected files"() {
 		given:
 		def outputDirectory = new File(gradle.runner.projectDir, 'output');
 		@Language('gradle')
