@@ -1,9 +1,21 @@
 // [build-src] copied the default configuration manually to make standalone editing behave the same way as buildSrc
 apply plugin: 'groovy' // [build-src]
+
+def props = new java.util.Properties().with {
+	file("../gradle.properties").withInputStream { load(it) }
+	return it
+}
+
+repositories {
+	jcenter()
+}
+
 dependencies {
 	compileOnly gradleApi() // [build-src]
 	compileOnly localGroovy() // [build-src]
-	
+
+	compileOnly "com.jakewharton:butterknife-reflect:${props.VERSION_BUTTERKNIFE}"
+
 	// [build-src] need to export some subprojects so that they're available as buildscript.dependencies.classpath
 	//runtimeOnly project(':class-gen-tasks') // [big-gen]
 }

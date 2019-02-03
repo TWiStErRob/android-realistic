@@ -7,9 +7,13 @@ dependencies {
 	compileOnly project(':feature:about-contract')
 	compileOnly "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
-	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
-	annotationProcessor "com.jakewharton:butterknife-compiler:${VERSION_BUTTERKNIFE}"
-
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
-	implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
+	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+
+	if (project.properties.containsKey('android.injected.invoked.from.ide')) {
+		implementation "com.jakewharton:butterknife-reflect:${VERSION_BUTTERKNIFE}"
+	} else {
+		implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
+		annotationProcessor "com.jakewharton:butterknife-compiler:${VERSION_BUTTERKNIFE}"
+	}
 }
