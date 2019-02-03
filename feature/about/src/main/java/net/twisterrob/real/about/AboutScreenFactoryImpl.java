@@ -18,6 +18,7 @@ public class AboutScreenFactoryImpl implements AboutScreenFactory {
 	}
 
 	@Override public @NonNull Intent launch() {
-		return new Intent(context, net.twisterrob.real.about.AboutActivity.class);
+		return new Intent(context, AboutActivity.class)
+				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	}
 }
