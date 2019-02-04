@@ -25,9 +25,13 @@ dependencies {
 	implementation "com.android.support:multidex:${VERSION_MULTIDEX}" // [multidex]
 	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
-	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
-
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
+	if (dagger_reflect_enabled.toBoolean() && project.hasProperty('android.injected.invoked.from.ide')) {
+		implementation "com.jakewharton.dagger:dagger-reflect:${VERSION_DAGGER_REFLECT}"
+	} else {
+		implementation "com.jakewharton.dagger:dagger-codegen:${VERSION_DAGGER_REFLECT}"
+		annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+	}
 
 //	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
 //	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"

@@ -8,9 +8,13 @@ dependencies {
 	compileOnly "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
-	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+	if (dagger_reflect_enabled.toBoolean() && project.hasProperty('android.injected.invoked.from.ide')) {
+		implementation "com.jakewharton.dagger:dagger-reflect:${VERSION_DAGGER_REFLECT}"
+	} else {
+		annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+	}
 
-	if (false && project.properties.containsKey('android.injected.invoked.from.ide')) {
+	if (butterknife_reflect_enabled.toBoolean() && project.hasProperty('android.injected.invoked.from.ide')) {
 		implementation "com.jakewharton:butterknife-reflect:${VERSION_BUTTERKNIFE}"
 	} else {
 		implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
