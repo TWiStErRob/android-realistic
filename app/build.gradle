@@ -12,7 +12,7 @@ android {
 	buildTypes {
 		debug {
 			applicationIdSuffix ".debug"
-			minifyEnabled true
+//			minifyEnabled true
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}
@@ -36,9 +36,9 @@ dependencies {
 		annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
 	}
 
-//	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
-//	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
-//	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
+	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
 }
 
 // [big-gen] add task and specify where to put the .jar file

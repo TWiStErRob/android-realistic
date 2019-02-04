@@ -8,8 +8,10 @@ dependencies {
 	compileOnly "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
 	if (dagger_reflect_enabled.toBoolean() && project.hasProperty('android.injected.invoked.from.ide')) {
 		implementation "com.jakewharton.dagger:dagger-reflect:${VERSION_DAGGER_REFLECT}"
+		annotationProcessor "com.jakewharton.dagger:dagger-reflect-compiler:${VERSION_DAGGER_REFLECT}"
 	} else {
 		annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
 	}
