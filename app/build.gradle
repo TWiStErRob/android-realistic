@@ -12,6 +12,8 @@ android {
 	buildTypes {
 		debug {
 			applicationIdSuffix ".debug"
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}
 }
@@ -28,8 +30,9 @@ dependencies {
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
 	if (dagger_reflect_enabled.toBoolean() && project.hasProperty('android.injected.invoked.from.ide')) {
 		implementation "com.jakewharton.dagger:dagger-reflect:${VERSION_DAGGER_REFLECT}"
+		annotationProcessor "com.jakewharton.dagger:dagger-reflect-compiler:${VERSION_DAGGER_REFLECT}"
 	} else {
-		implementation "com.jakewharton.dagger:dagger-codegen:${VERSION_DAGGER_REFLECT}"
+//		implementation "com.jakewharton.dagger:dagger-codegen:${VERSION_DAGGER_REFLECT}"
 		annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
 	}
 
