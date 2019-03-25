@@ -11,5 +11,6 @@ dependencies {
 	annotationProcessor "com.jakewharton:butterknife-compiler:${VERSION_BUTTERKNIFE}"
 
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}" // [dagger-android]
 	implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
 }

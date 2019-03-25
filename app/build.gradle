@@ -29,9 +29,10 @@ dependencies {
 
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
 
-//	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
-//	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
-//	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
+	// [dagger-android]
+	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
+	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
 }
 
 // [big-gen] add task and specify where to put the .jar file

@@ -98,6 +98,7 @@ Resolving any of these in a nice way is very welcome!
      IDEA supports developing inline (as a module) as well, but build errors may be hard to figure out since any Gradle task executed from the IDE will need to build `buildSrc` first: chicken and egg. See also `[build-src-hack]`.
  * `[arch]` TODO MVP, Clean architecture
  * `[di]` TODO Dagger, ButterKnife
+ * `[dagger-android]` for simplified injection of feature modules
  * `[nav]` TODO `ScreenFactory` + `Navigator`
  * `[vector]` TODO appcompat, SVG conversion
  * `[version]` gradle.properties + `"...${}"`
