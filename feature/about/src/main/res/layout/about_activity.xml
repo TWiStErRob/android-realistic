@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-	android:id="@+id/about$root"
+	android:id="@+id/about_root"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
@@ -11,7 +11,7 @@
 	>
 
 	<ImageView
-		android:id="@+id/about$icon"
+		android:id="@+id/about_icon"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:adjustViewBounds="true"
@@ -20,7 +20,7 @@
 		/>
 
 	<TextView
-		android:id="@+id/about$name"
+		android:id="@+id/about_name"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal"
@@ -29,7 +29,7 @@
 		/>
 
 	<TextView
-		android:id="@+id/about$version"
+		android:id="@+id/about_version"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center_horizontal"

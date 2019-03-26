@@ -13,7 +13,7 @@ import dagger.android.AndroidInjection;
 
 public class AboutActivity extends AppCompatActivity {
 
-	@BindView(R2.id.about$root)
+	@BindView(R2.id.about_root)
 	View root;
 
 	@Inject

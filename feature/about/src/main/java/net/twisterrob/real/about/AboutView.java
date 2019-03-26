@@ -12,11 +12,11 @@ import butterknife.ButterKnife;
 
 public class AboutView implements AboutContract.View {
 
-	@BindView(R2.id.about$name)
+	@BindView(R2.id.about_name)
 	TextView text;
-	@BindView(R2.id.about$version)
+	@BindView(R2.id.about_version)
 	TextView version;
-	@BindView(R2.id.about$icon)
+	@BindView(R2.id.about_icon)
 	ImageView icon;
 
 	@Inject

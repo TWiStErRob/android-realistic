@@ -3,6 +3,6 @@
 	package="net.twisterrob.real.about">
 	<application>
 		<activity android:name=".AboutActivity"
-		          android:label="@string/title" />
+		          android:label="@string/about_title" />
 	</application>
 </manifest>
