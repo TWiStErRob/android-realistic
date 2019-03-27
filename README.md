@@ -103,6 +103,7 @@ Resolving any of these in a nice way is very welcome!
  * `[vector]` TODO appcompat, SVG conversion
  * `[version]` gradle.properties + `"...${}"`
  * `[build-share]` android-setup.gradle
+ * `[stetho]` Stetho is a library for sharing app-state with chrome://inspect. It's only added in debug builds to not expose internals in releases. Release code has only the skeleton to make it compile.
     
 
 ## Glossary

@@ -33,6 +33,10 @@ dependencies {
 	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}"
 	implementation "com.google.dagger:dagger-android-support:${VERSION_DAGGER}"
 	annotationProcessor "com.google.dagger:dagger-android-processor:${VERSION_DAGGER}"
+
+	// [stetho]
+	debugImplementation "com.facebook.stetho:stetho:${VERSION_STETHO}"
+	debugImplementation "com.facebook.stetho:stetho-okhttp3:${VERSION_STETHO}"
 }
 
 // [big-gen] add task and specify where to put the .jar file
