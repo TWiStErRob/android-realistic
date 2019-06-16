@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 
 import com.facebook.stetho.Stetho;
@@ -18,6 +19,9 @@ public class App extends Application implements HasActivityInjector {
 	@Inject
 	DispatchingAndroidInjector<Activity> dispatchingActivityInjector;
 
+	@Inject
+	AppComponent appComponent;
+
 	@Override protected void attachBaseContext(Context base) {
 		super.attachBaseContext(base);
 		MultiDex.install(this); // [multidex]
@@ -26,10 +30,17 @@ public class App extends Application implements HasActivityInjector {
 	@Override public void onCreate() {
 		super.onCreate();
 		Stetho.initializeWithDefaults(this); // [stetho]
-		DaggerAppComponent.builder()
-		                  .application(this)
-		                  .build()
-		                  .inject(this);
+		createAppComponent().inject(this);
+	}
+
+	protected @NonNull AppComponent createAppComponent() {
+		return DaggerAppComponent.builder()
+		                         .application(this)
+		                         .build();
+	}
+
+	public @NonNull AppComponent getAppComponent() {
+		return appComponent;
 	}
 
 	@Override
