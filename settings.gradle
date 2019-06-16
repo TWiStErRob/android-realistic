@@ -5,6 +5,7 @@ include ':feature:repo', ':feature:repo-contract'
 include ':feature:main'
 include ':feature:base'
 include ':component:configuration'
+include ':component:ui_test'
 include ':core'
 
 // [build-src-hack] future-proof version of the hack that doesn't need to maintain a buildSrc sub-project list

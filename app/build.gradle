@@ -17,7 +17,7 @@ android {
 	}
 }
 
-dependencies {
+dependencies { // production
 
 	implementation project(':component:configuration')
 
@@ -43,6 +43,10 @@ dependencies {
 	debugImplementation "com.facebook.stetho:stetho-okhttp3:${VERSION_STETHO}"
 
 	implementation "com.squareup.okhttp3:okhttp:${VERSION_OKHTTP}"
+}
+
+dependencies { // UI tests
+	androidTestImplementation project(':component:ui_test')
 }
 
 // [big-gen] add task and specify where to put the .jar file
