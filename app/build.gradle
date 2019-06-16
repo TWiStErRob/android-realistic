@@ -9,6 +9,7 @@ android {
 
 		multiDexEnabled true // [multidex]
 	}
+
 	buildTypes {
 		debug {
 			applicationIdSuffix ".debug"
@@ -26,7 +27,6 @@ dependencies {
 	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
 
 	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
-
 	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
 
 	// [dagger-android]

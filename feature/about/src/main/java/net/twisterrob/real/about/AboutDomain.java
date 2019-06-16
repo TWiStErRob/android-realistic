@@ -2,9 +2,6 @@ package net.twisterrob.real.about;
 
 import android.support.annotation.NonNull;
 
-import dagger.Module;
-
-@Module
 public class AboutDomain {
 
 	public static final String MISSING_VERSION = "<N/A>";

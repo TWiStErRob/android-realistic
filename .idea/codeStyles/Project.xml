@@ -158,6 +158,9 @@
     <MarkdownNavigatorCodeStyleSettings>
       <option name="RIGHT_MARGIN" value="72" />
     </MarkdownNavigatorCodeStyleSettings>
+    <Properties>
+      <option name="KEEP_BLANK_LINES" value="true" />
+    </Properties>
     <XML>
       <option name="XML_TEXT_WRAP" value="0" />
       <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
