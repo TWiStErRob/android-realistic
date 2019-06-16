@@ -16,8 +16,14 @@ android {
 	}
 
 	buildTypes {
+		// android:usesCleartextTraffic="${usesCleartextTraffic}"
 		debug {
 			applicationIdSuffix ".debug"
+			// TODO Debug build is used for androidTest and MockWebServer is not HTTPS yet
+			addManifestPlaceholders usesCleartextTraffic: true
+		}
+		release {
+			addManifestPlaceholders usesCleartextTraffic: false
 		}
 	}
 }
