@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
 	void onAboutClick() {
 		navigator.gotoAbout();
 	}
+
+	@OnClick(R2.id.repos_button)
+	void onReposClick() {
+		navigator.gotoRepos();
+	}
 }

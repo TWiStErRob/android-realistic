@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply from: rootProject.file('gradle/android-setup.gradle')
+
+dependencies {
+	api project(':feature:base')
+	api project(':feature:repos-contract')
+
+	implementation project(':component:configuration')
+	compileOnly project(':feature:repo-contract')
+
+	api "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
+	api "com.android.support:recyclerview-v7:${VERSION_SUPPORT}"
+	api "com.android.support:cardview-v7:${VERSION_SUPPORT}"
+	api "com.android.support:design:${VERSION_SUPPORT}"
+	api "com.android.support.constraint:constraint-layout:${VERSION_CONSTRAINT_LAYOUT}"
+
+	annotationProcessor "com.google.dagger:dagger-compiler:${VERSION_DAGGER}"
+	annotationProcessor "com.jakewharton:butterknife-compiler:${VERSION_BUTTERKNIFE}"
+
+	implementation "com.google.dagger:dagger:${VERSION_DAGGER}"
+	implementation "com.google.dagger:dagger-android:${VERSION_DAGGER}" // [dagger-android]
+	implementation "com.jakewharton:butterknife:${VERSION_BUTTERKNIFE}"
+
+	implementation "com.google.code.gson:gson:${VERSION_GSON}"
+	implementation "io.reactivex:rxjava:${VERSION_RXJAVA}"
+	implementation "io.reactivex:rxandroid:${VERSION_RXANDROID}"
+	// Dagger requires this to be `api`
+	api "com.squareup.retrofit2:retrofit:${VERSION_RETROFIT}"
+	implementation "com.squareup.retrofit2:converter-gson:${VERSION_RETROFIT}"
+	implementation "com.squareup.retrofit2:adapter-rxjava:${VERSION_RETROFIT}"
+}

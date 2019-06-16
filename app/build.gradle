@@ -24,6 +24,8 @@ dependencies {
 	compileOnly project(':feature:base')
 	implementation project(':feature:about')
 	implementation project(':feature:main')
+	implementation project(':feature:repos')
+	implementation project(':feature:repo')
 	implementation fileTree(dir: 'libs', include: '*.jar')
 	implementation "com.android.support:multidex:${VERSION_MULTIDEX}" // [multidex]
 	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
@@ -39,6 +41,8 @@ dependencies {
 	// [stetho]
 	debugImplementation "com.facebook.stetho:stetho:${VERSION_STETHO}"
 	debugImplementation "com.facebook.stetho:stetho-okhttp3:${VERSION_STETHO}"
+
+	implementation "com.squareup.okhttp3:okhttp:${VERSION_OKHTTP}"
 }
 
 // [big-gen] add task and specify where to put the .jar file

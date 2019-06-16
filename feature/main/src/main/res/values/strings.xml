@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="main_about_button_label">About</string>
+	<string name="main_repos_button_label">Repositories</string>
 </resources>

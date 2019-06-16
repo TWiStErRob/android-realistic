@@ -1,5 +1,7 @@
 include ':app'
 include ':feature:about', ':feature:about-contract'
+include ':feature:repos', ':feature:repos-contract'
+include ':feature:repo', ':feature:repo-contract'
 include ':feature:main'
 include ':feature:base'
 include ':component:configuration'

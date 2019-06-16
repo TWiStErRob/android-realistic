@@ -1,0 +1,14 @@
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="net.twisterrob.real.repos">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<application>
+
+		<activity android:name=".ui.ReposActivity"
+		          android:label="@string/repos_title" />
+
+	</application>
+
+</manifest>
