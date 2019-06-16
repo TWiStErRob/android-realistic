@@ -5,9 +5,11 @@ import android.app.Instrumentation
 import android.content.Context
 import android.os.Bundle
 import android.support.test.runner.AndroidJUnitRunner
+import net.twisterrob.real.app.BuildConfig
 import net.twisterrob.real.test.lifecycle.AppConfigurationApplicationLifecycleCallback
 import net.twisterrob.real.test.lifecycle.IdlingResourcesApplicationLifecycleCallback
 import net.twisterrob.real.test.lifecycle.Rx1ApplicationLifecycleCallback
+import net.twisterrob.real.test.lifecycle.TestButlerApplicationLifecycleCallback
 
 @Suppress("unused") // build.gradle: android.buildConfig.testInstrumentationRunner
 class AndroidJUnitRunner : AndroidJUnitRunner() {
@@ -17,6 +19,7 @@ class AndroidJUnitRunner : AndroidJUnitRunner() {
 	private val lifecycleCallback: ApplicationLifecycleCallback = CompositeApplicationLifecycleCallback(
 		Rx1ApplicationLifecycleCallback(),
 		IdlingResourcesApplicationLifecycleCallback(),
+		*conditional(BuildConfig.USE_TEST_BUTLER) { TestButlerApplicationLifecycleCallback() }, // [test-butler]
 		AppConfigurationApplicationLifecycleCallback()
 	)
 
@@ -49,4 +52,11 @@ class AndroidJUnitRunner : AndroidJUnitRunner() {
 		lifecycleCallback.onApplicationDestroyed(app)
 		super.finish(resultCode, results)
 	}
+}
+
+private fun conditional(
+	condition: Boolean,
+	creator: () -> ApplicationLifecycleCallback
+): Array<ApplicationLifecycleCallback> {
+	return if (condition) arrayOf(creator()) else emptyArray()
 }

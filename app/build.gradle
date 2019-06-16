@@ -11,6 +11,8 @@ android {
 
 		testInstrumentationRunner 'net.twisterrob.real.test.instrumentation.AndroidJUnitRunner'
 		testApplicationId 'net.twisterrob.real.test'
+
+		buildConfigField("boolean", "USE_TEST_BUTLER", "false") // [test-butler]
 	}
 
 	buildTypes {
@@ -55,6 +57,7 @@ dependencies { // UI tests
 
 	androidTestImplementation "com.android.support.test:rules:${VERSION_ANDROID_TEST_RULES}"
 	androidTestImplementation "com.android.support.test:runner:${VERSION_ANDROID_TEST_RUNNER}"
+	androidTestImplementation "com.linkedin.testbutler:test-butler-library:${VERSION_TEST_BUTLER}" // [test-butler]
 	androidTestImplementation "com.squareup.rx.idler:rx1-idler:0.9.1"
 }
 
