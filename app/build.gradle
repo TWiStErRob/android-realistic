@@ -51,6 +51,7 @@ dependencies { // production
 dependencies { // UI tests
 	androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
 	androidTestImplementation project(':component:ui_test')
+	androidTestImplementation project(':component:ui_test:helpers')
 
 	androidTestImplementation "com.android.support.test:rules:${VERSION_ANDROID_TEST_RULES}"
 	androidTestImplementation "com.android.support.test:runner:${VERSION_ANDROID_TEST_RUNNER}"

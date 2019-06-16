@@ -6,6 +6,7 @@ include ':feature:main'
 include ':feature:base'
 include ':component:configuration'
 include ':component:ui_test'
+include ':component:ui_test:helpers'
 include ':core'
 
 // [build-src-hack] future-proof version of the hack that doesn't need to maintain a buildSrc sub-project list
