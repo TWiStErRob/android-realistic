@@ -19,3 +19,25 @@ android {
 		androidTest.java.srcDirs += 'src/androidTest/kotlin'
 	}
 }
+
+gradle.projectsEvaluated {
+	tasks.withType(JavaCompile).configureEach { // [strict-compile]
+		options.compilerArgs += [
+				"-Werror",
+				"-Xlint:all",
+				// Dagger has MethodParameters in 52.0 class files, which is ignored in 51.0
+				"-Xlint:-classfile",
+				// No processor claimed any of these annotations
+				"-Xlint:-processing",
+				// Ignore serialVersionUID warnings, not using Java Serializable
+				"-Xlint:-serial",
+		]
+		if (project.path == ":app") {
+			options.compilerArgs += [
+					// TODO report/fix dagger-android warning:
+					// unchecked call to put(K,V) as a member of the raw type MapBuilder in DaggerAppComponent
+					"-Xlint:-unchecked"
+			]
+		}
+	}
+}
