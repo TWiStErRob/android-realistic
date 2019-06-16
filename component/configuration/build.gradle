@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library' // TODO jar-only
+apply from: rootProject.file('gradle/android-setup.gradle')
+
+dependencies {
+
+	compileOnly project(':core')
+
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
+
+	compileOnly "com.google.dagger:dagger:${VERSION_DAGGER}"
+}

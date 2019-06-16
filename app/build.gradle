@@ -19,6 +19,8 @@ android {
 
 dependencies {
 
+	implementation project(':component:configuration')
+
 	compileOnly project(':feature:base')
 	implementation project(':feature:about')
 	implementation project(':feature:main')
