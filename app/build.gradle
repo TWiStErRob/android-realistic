@@ -8,6 +8,9 @@ android {
 		versionName "1.0"
 
 		multiDexEnabled true // [multidex]
+
+		testInstrumentationRunner 'net.twisterrob.real.test.instrumentation.AndroidJUnitRunner'
+		testApplicationId 'net.twisterrob.real.test'
 	}
 
 	buildTypes {
@@ -46,7 +49,12 @@ dependencies { // production
 }
 
 dependencies { // UI tests
+	androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
 	androidTestImplementation project(':component:ui_test')
+
+	androidTestImplementation "com.android.support.test:rules:${VERSION_ANDROID_TEST_RULES}"
+	androidTestImplementation "com.android.support.test:runner:${VERSION_ANDROID_TEST_RUNNER}"
+	androidTestImplementation "com.squareup.rx.idler:rx1-idler:0.9.1"
 }
 
 // [big-gen] add task and specify where to put the .jar file

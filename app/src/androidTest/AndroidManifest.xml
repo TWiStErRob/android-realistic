@@ -1,0 +1,11 @@
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="net.twisterrob.real.test">
+
+	<!-- see net.twisterrob.real.test.instrumentation.AndroidJUnitRunner.newApplication -->
+	<application
+		android:name="net.twisterrob.real.test.instrumentation.TestApplication">
+
+	</application>
+
+</manifest>
