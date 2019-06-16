@@ -1,3 +1,5 @@
+apply plugin: 'kotlin-android' // [kotlin]
+
 android {
 	defaultConfig {
 		minSdkVersion VERSION_SDK_MIN as int
@@ -10,5 +12,10 @@ android {
 	compileOptions {
 		sourceCompatibility VERSION_JAVA as String
 		targetCompatibility VERSION_JAVA as String
+	}
+
+	sourceSets { // [kotlin]
+		test.java.srcDirs += 'src/test/kotlin'
+		androidTest.java.srcDirs += 'src/androidTest/kotlin'
 	}
 }
