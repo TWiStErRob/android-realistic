@@ -131,11 +131,11 @@
       </replaceConfiguration>
       <replaceConfiguration name="Hamcrest: use hasSize() matcher instead of assertEquals(*, size())" text="assertEquals($expectedSize$, $collection$.size());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" useStaticImport="true" replacement="assertThat($collection$, org.hamcrest.Matchers.hasSize($expectedSize$));">
         <constraint name="expectedSize" regexp="0" negateName="true" within="" contains="" />
-        <constraint name="collection" nameOfExprType="java.util.Collection" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="collection" nameOfExprType="java.util.Collection" expressionTypes="java.util.Collection" exprTypeWithinHierarchy="true" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="Espresso fix: missing ViewAssertions.matches wrapper in ViewInteraction.check call" text="$expr$.check($matcher$)" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="false" shortenFQN="true" useStaticImport="true" replacement="$expr$.check(android.support.test.espresso.assertion.ViewAssertions.matches($matcher$))">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="matcher" nameOfExprType="org\.hamcrest\.Matcher" nameOfFormalType="android\.support\.test\.espresso\.ViewAssertion" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="matcher" nameOfExprType="org\.hamcrest\.Matcher" expressionTypes="org.hamcrest.Matcher" nameOfFormalType="android\.support\.test\.espresso\.ViewAssertion" exceptedTypes="android.support.test.espresso.ViewAssertion" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="expr" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="Mockito: unnecessary argument matchers (1)" text="$expr$.$method$(eq($arg1$)) " recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$expr$.$method$($arg1$)">
@@ -266,70 +266,70 @@
         <constraint name="init" minCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertValue() instead of get(0)" text="assertEquals(1, $subscriber$.getOnNextEvents().size());&#10;$other_stuff$;&#10;assertEquals($value$, $subscriber$.getOnNextEvents().get(0));" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$other_stuff$;&#10;$subscriber$.assertValue($value$);">
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="value" within="" contains="" />
         <constraint name="other_stuff" minCount="0" maxCount="2147483647" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoValues() instead (size)" text="assertEquals(0, $subscriber$.getOnNextEvents().size());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoValues();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoValues() instead (empty)" text="assertThat($subscriber$.getOnNextEvents(), org.hamcrest.Matchers.empty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoValues();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoValues() instead (is(empty))" text="assertThat($subscriber$.getOnNextEvents(), org.hamcrest.Matchers.is(org.hamcrest.Matchers.empty()));" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoValues();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoValues() instead (isEmpty)" text="assertTrue($subscriber$.getOnNextEvents().isEmpty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoValues();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertError() instead of get(0)" text="assertEquals(1, $subscriber$.getOnErrorEvents().size());&#10;$other_stuff$;&#10;assertEquals($value$, $subscriber$.getOnErrorEvents().get(0));&#10;" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$other_stuff$;&#10;$subscriber$.assertError($value$);&#10;&#10;">
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="value" within="" contains="" />
         <constraint name="other_stuff" minCount="0" maxCount="2147483647" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoErrors() instead (size)" text="assertEquals(0, $subscriber$.getOnErrorEvents().size());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoErrors();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoErrors() instead (empty)" text="assertThat($subscriber$.getOnErrorEvents(), org.hamcrest.Matchers.empty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoErrors();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoErrors() instead (is(empty))" text="assertThat($subscriber$.getOnErrorEvents(), org.hamcrest.Matchers.is(org.hamcrest.Matchers.empty()));" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoErrors();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNoErrors() instead (isEmpty)" text="assertTrue($subscriber$.getOnErrorEvents().isEmpty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNoErrors();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNotCompleted() instead (size)" text="assertEquals(0, $subscriber$.getOnCompletedEvents().size());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNotCompleted();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNotCompleted() instead (empty)" text="assertThat($subscriber$.getOnCompletedEvents(), org.hamcrest.Matchers.empty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNotCompleted();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNotCompleted() instead (is(empty))" text="assertThat($subscriber$.getOnCompletedEvents(), org.hamcrest.Matchers.is(org.hamcrest.Matchers.empty()));" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNotCompleted();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <replaceConfiguration name="RxJava: use assertNotCompleted() instead (isEmpty)" text="assertTrue($subscriber$.getOnCompletedEvents().isEmpty());" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="$subscriber$.assertNotCompleted();">
         <constraint name="__context__" target="true" within="" contains="" />
-        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="subscriber" nameOfExprType="rx.observers.TestSubscriber" expressionTypes="rx.observers.TestSubscriber" exprTypeWithinHierarchy="true" within="" contains="" />
         <constraint name="is" minCount="0" maxCount="0" within="" contains="" />
       </replaceConfiguration>
       <searchConfiguration name="JUnit error: use @Parametrized.Parameter needs to be public" text="@org.junit.runners.Parameterized.Parameter $FieldType$ $Field$;" recursive="false" caseInsensitive="true" type="JAVA">
