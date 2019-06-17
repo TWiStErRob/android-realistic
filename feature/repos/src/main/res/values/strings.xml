@@ -1,0 +1,8 @@
+<resources>
+	<string name="repos_title">Repositories</string>
+
+	<string name="repos_item_stars">Stars: %d</string>
+	<string name="repos_item_view_external">Launch in browser</string>
+	<string name="repos_username_label">User name</string>
+	<string name="repos_search_button">List repositories</string>
+</resources>

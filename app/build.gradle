@@ -8,20 +8,35 @@ android {
 		versionName "1.0"
 
 		multiDexEnabled true // [multidex]
+
+		testInstrumentationRunner 'net.twisterrob.real.test.instrumentation.AndroidJUnitRunner'
+		testApplicationId 'net.twisterrob.real.test'
+
+		buildConfigField("boolean", "USE_TEST_BUTLER", "false") // [test-butler]
 	}
 
 	buildTypes {
+		// android:usesCleartextTraffic="${usesCleartextTraffic}"
 		debug {
 			applicationIdSuffix ".debug"
+			// TODO Debug build is used for androidTest and MockWebServer is not HTTPS yet
+			addManifestPlaceholders usesCleartextTraffic: true
+		}
+		release {
+			addManifestPlaceholders usesCleartextTraffic: false
 		}
 	}
 }
 
-dependencies {
+dependencies { // production
+
+	implementation project(':component:configuration')
 
 	compileOnly project(':feature:base')
 	implementation project(':feature:about')
 	implementation project(':feature:main')
+	implementation project(':feature:repos')
+	implementation project(':feature:repo')
 	implementation fileTree(dir: 'libs', include: '*.jar')
 	implementation "com.android.support:multidex:${VERSION_MULTIDEX}" // [multidex]
 	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
@@ -37,6 +52,19 @@ dependencies {
 	// [stetho]
 	debugImplementation "com.facebook.stetho:stetho:${VERSION_STETHO}"
 	debugImplementation "com.facebook.stetho:stetho-okhttp3:${VERSION_STETHO}"
+
+	implementation "com.squareup.okhttp3:okhttp:${VERSION_OKHTTP}"
+}
+
+dependencies { // UI tests
+	androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
+	androidTestImplementation project(':component:ui_test')
+	androidTestImplementation project(':component:ui_test:helpers')
+
+	androidTestImplementation "com.android.support.test:rules:${VERSION_ANDROID_TEST_RULES}"
+	androidTestImplementation "com.android.support.test:runner:${VERSION_ANDROID_TEST_RUNNER}"
+	androidTestImplementation "com.linkedin.testbutler:test-butler-library:${VERSION_TEST_BUTLER}" // [test-butler]
+	androidTestImplementation "com.squareup.rx.idler:rx1-idler:0.9.1"
 }
 
 // [big-gen] add task and specify where to put the .jar file

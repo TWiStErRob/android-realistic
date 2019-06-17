@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library' // TODO jar-only
+apply from: rootProject.file('gradle/android-setup.gradle')
+
+dependencies {
+
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
+
+	implementation "com.squareup.okhttp3:mockwebserver:${VERSION_OKHTTP}"
+
+	api "com.android.support.test.espresso:espresso-core:${VERSION_ESPRESSO_CORE}"
+	api "com.android.support.test.espresso:espresso-intents:${VERSION_ESPRESSO_CONTRIB}"
+}

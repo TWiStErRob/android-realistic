@@ -10,6 +10,7 @@
 		android:allowBackup="true"
 		android:fullBackupContent="true"
 		android:theme="@style/AppTheme"
+		android:usesCleartextTraffic="${usesCleartextTraffic}"
 		tools:ignore="GoogleAppIndexingWarning">
 		<activity
 			android:name="net.twisterrob.real.main.MainActivity">
