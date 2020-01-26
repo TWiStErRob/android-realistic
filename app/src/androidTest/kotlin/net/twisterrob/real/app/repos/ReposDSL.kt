@@ -1,11 +1,11 @@
 package net.twisterrob.real.app.repos
 
-import android.support.annotation.CheckResult
-import android.support.annotation.IntRange
-import android.support.test.espresso.intent.Intents
-import android.support.test.espresso.intent.matcher.IntentMatchers.anyIntent
-import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.view.View
+import androidx.annotation.CheckResult
+import androidx.annotation.IntRange
+import androidx.test.espresso.intent.Intents
+import androidx.test.espresso.intent.matcher.IntentMatchers.anyIntent
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import net.twisterrob.real.app.R
 import net.twisterrob.real.repos.ReposScreenFactoryImpl
 import net.twisterrob.real.test.DSL

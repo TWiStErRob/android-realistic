@@ -1,7 +1,7 @@
 package net.twisterrob.real.test
 
-import android.support.annotation.MainThread
-import android.support.test.espresso.IdlingResource
+import androidx.annotation.MainThread
+import androidx.test.espresso.IdlingResource
 import okhttp3.Dispatcher
 import okhttp3.OkHttpClient
 
@@ -19,7 +19,7 @@ class OkHttpIdlingResource(
 	 * Include the [OkHttpClient]'s [hashCode] to make sure multiple clients can be idled.
 	 *
 	 * If the same client is registered with twice, the name will be the same and trigger duplicate behavior.
-	 * @see android.support.test.espresso.base.IdlingResourceRegistry.logDuplicateRegistrationError
+	 * @see androidx.test.espresso.base.IdlingResourceRegistry.logDuplicateRegistrationError
 	 */
 	override fun getName(): String =
 		"${OkHttpIdlingResource::class.java.simpleName}@${okHttpClient.hashCode()}"

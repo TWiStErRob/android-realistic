@@ -2,8 +2,7 @@ package com.facebook.stetho.okhttp3;
 
 import java.io.IOException;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import okhttp3.Interceptor;
 import okhttp3.Response;
 

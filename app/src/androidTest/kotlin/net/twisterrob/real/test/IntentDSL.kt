@@ -4,10 +4,10 @@ import android.app.Activity
 import android.app.Instrumentation
 import android.content.Intent
 import android.net.Uri
-import android.support.test.espresso.intent.Intents
-import android.support.test.espresso.intent.matcher.IntentMatchers.hasAction
-import android.support.test.espresso.intent.matcher.IntentMatchers.hasData
-import android.support.test.espresso.intent.matcher.IntentMatchers.isInternal
+import androidx.test.espresso.intent.Intents
+import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
+import androidx.test.espresso.intent.matcher.IntentMatchers.hasData
+import androidx.test.espresso.intent.matcher.IntentMatchers.isInternal
 import net.twisterrob.real.test.collaborator.Device
 import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.Matcher

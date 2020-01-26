@@ -2,7 +2,7 @@ package net.twisterrob.real.repos.ui;
 
 import javax.inject.Inject;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import net.twisterrob.real.repos.ReposNavigator;
 

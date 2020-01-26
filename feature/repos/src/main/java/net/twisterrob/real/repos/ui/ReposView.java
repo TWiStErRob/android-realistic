@@ -2,10 +2,10 @@ package net.twisterrob.real.repos.ui;
 
 import javax.inject.Inject;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

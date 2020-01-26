@@ -4,7 +4,8 @@ buildscript {
 		jcenter() // Search: https://bintray.com/bintray/jcenter
 		// https://developer.android.com/studio/build/dependencies.html#google-maven
 		google() // Browse: https://maven.google.com
-		maven { name 'Sonatype SNAPSHOTs'; url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+//		maven { name = "JitPack.io"; url = "https://jitpack.io" }
+		maven { name = "Sonatype SNAPSHOTs"; url = "https://oss.sonatype.org/content/repositories/snapshots/" }
 	}
 	dependencies {
 		classpath "com.android.tools.build:gradle:${VERSION_ANDROID_PLUGIN}"
@@ -19,6 +20,6 @@ subprojects {
 		jcenter()
 		// support library and similar helpers
 		google()
-		maven { name 'Sonatype SNAPSHOTs'; url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+		maven { name = "Sonatype SNAPSHOTs"; url = "https://oss.sonatype.org/content/repositories/snapshots/" }
 	}
 }

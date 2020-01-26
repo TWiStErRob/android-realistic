@@ -8,7 +8,6 @@ import net.twisterrob.real.test.gwen.gwen
 import net.twisterrob.real.test.gwen.then
 import net.twisterrob.real.test.gwen.whenever
 import org.junit.Test
-import net.twisterrob.real.test.R as testR
 
 /**
  * @see net.twisterrob.real.repo.RepoActivity

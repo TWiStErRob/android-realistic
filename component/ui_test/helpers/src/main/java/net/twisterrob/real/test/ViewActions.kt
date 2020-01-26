@@ -1,14 +1,14 @@
 package net.twisterrob.real.test
 
-import android.support.annotation.CheckResult
-import android.support.annotation.IntRange
-import android.support.test.espresso.UiController
-import android.support.test.espresso.ViewAction
-import android.support.test.espresso.matcher.ViewMatchers.isAssignableFrom
-import android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA
-import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
-import android.support.v7.widget.RecyclerView
 import android.view.View
+import androidx.annotation.CheckResult
+import androidx.annotation.IntRange
+import androidx.recyclerview.widget.RecyclerView
+import androidx.test.espresso.UiController
+import androidx.test.espresso.ViewAction
+import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
+import androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
 

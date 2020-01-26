@@ -3,12 +3,12 @@ package net.twisterrob.real.test
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.IdlingRegistry
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.isAssignableFrom
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.RecyclerView
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.IdlingRegistry
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import org.hamcrest.Matcher
 import org.junit.Assert.fail
 

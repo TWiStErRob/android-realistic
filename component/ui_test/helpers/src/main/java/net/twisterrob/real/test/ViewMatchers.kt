@@ -1,11 +1,11 @@
 package net.twisterrob.real.test
 
-import android.support.annotation.CheckResult
-import android.support.annotation.IntRange
-import android.support.test.espresso.matcher.ViewMatchers
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
 import android.view.View
+import androidx.annotation.CheckResult
+import androidx.annotation.IntRange
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.RecyclerView
+import androidx.test.espresso.matcher.ViewMatchers
 import org.hamcrest.Description
 import org.hamcrest.FeatureMatcher
 import org.hamcrest.Matcher

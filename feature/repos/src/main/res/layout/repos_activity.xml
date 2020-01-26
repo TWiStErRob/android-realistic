@@ -41,7 +41,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		/>
 
-	<android.support.v7.widget.RecyclerView
+	<androidx.recyclerview.widget.RecyclerView
 		android:id="@+id/repos_list"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
@@ -49,7 +49,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		tools:context=".ui.ReposActivity"
 		tools:listitem="@layout/repos_item"
-		app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 		/>
 
 </android.support.constraint.ConstraintLayout>

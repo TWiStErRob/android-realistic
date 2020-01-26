@@ -1,8 +1,8 @@
 package net.twisterrob.real.test.collaborator.server
 
 import android.content.res.Resources
-import android.support.annotation.RawRes
 import android.support.test.InstrumentationRegistry
+import androidx.annotation.RawRes
 import net.twisterrob.real.test.collaborator.Server
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.RecordedRequest

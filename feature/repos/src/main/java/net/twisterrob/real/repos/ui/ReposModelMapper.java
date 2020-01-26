@@ -7,7 +7,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import android.content.res.Resources;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import net.twisterrob.real.repos.R;
 import net.twisterrob.real.repos.RepositoryDomain;

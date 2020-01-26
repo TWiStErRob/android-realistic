@@ -1,6 +1,6 @@
 package net.twisterrob.real.repo;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public interface RepoContract {
 

@@ -1,6 +1,6 @@
 package net.twisterrob.real.test.collaborator
 
-import android.support.test.espresso.intent.Intents
+import androidx.test.espresso.intent.Intents
 import net.twisterrob.real.test.DSL
 import net.twisterrob.real.test.gwen.Arranger
 import net.twisterrob.real.test.gwen.Asserter
@@ -41,7 +41,7 @@ object Device : TestRule {
 
 	/**
 	 * Useful for blocking out [Intent](android.content.Intent)s via
-	 * [Intents.indending](android.support.test.espresso.intent.Intents.intending)
+	 * [Intents.indending](androidx.test.espresso.intent.Intents.intending)
 	 * to make sure no external apps or screens are launched.
 	 * See `IntentDSL.Kt` for methods.
 	 */

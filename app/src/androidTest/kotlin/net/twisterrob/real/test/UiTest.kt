@@ -1,7 +1,7 @@
 package net.twisterrob.real.test
 
-import android.support.test.rule.GrantPermissionRule
-import android.support.test.runner.AndroidJUnit4
+import androidx.test.rule.GrantPermissionRule
+import androidx.test.runner.AndroidJUnit4
 import net.twisterrob.real.test.collaborator.Device
 import net.twisterrob.real.test.collaborator.Server
 import net.twisterrob.real.test.rules.TestButlerRule

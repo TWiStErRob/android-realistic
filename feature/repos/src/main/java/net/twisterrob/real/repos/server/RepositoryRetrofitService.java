@@ -1,7 +1,6 @@
 package net.twisterrob.real.repos.server;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import rx.Single;

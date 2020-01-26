@@ -1,6 +1,6 @@
 package net.twisterrob.real.test.gwen
 
-import android.support.test.espresso.Espresso
+import androidx.test.espresso.Espresso
 import net.twisterrob.real.test.DSL
 
 /**

@@ -1,6 +1,6 @@
 package net.twisterrob.real.repos;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class RepositoryDomain {
 

@@ -3,9 +3,9 @@ package net.twisterrob.real.repos.ui;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
-import android.support.annotation.NonNull;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 

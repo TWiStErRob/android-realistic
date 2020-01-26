@@ -1,9 +1,9 @@
 package net.twisterrob.real.test.collaborator.server
 
-import android.support.annotation.AnyThread
-import android.support.annotation.MainThread
-import android.support.annotation.WorkerThread
 import android.util.Log
+import androidx.annotation.AnyThread
+import androidx.annotation.MainThread
+import androidx.annotation.WorkerThread
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

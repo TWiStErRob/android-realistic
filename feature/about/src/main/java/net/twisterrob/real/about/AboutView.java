@@ -2,11 +2,11 @@ package net.twisterrob.real.about;
 
 import javax.inject.Inject;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

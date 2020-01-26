@@ -1,11 +1,11 @@
 package net.twisterrob.real.test
 
 import android.content.res.Resources
-import android.support.annotation.MainThread
-import android.support.test.espresso.IdlingResource
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.OnScrollListener
 import android.view.View
+import androidx.annotation.MainThread
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
+import androidx.test.espresso.IdlingResource
 
 class RecyclerViewScrollingIdlingResource(
 	private val recyclerView: RecyclerView
@@ -22,7 +22,7 @@ class RecyclerViewScrollingIdlingResource(
 	 * Include the the [hashCode] to make it more unique in case multiple of the same IDs exist within the same UI.
 	 *
 	 * If the same view is registered twice, the name will be same and trigger duplicate behavior.
-	 * @see android.support.test.espresso.base.IdlingResourceRegistry.logDuplicateRegistrationError
+	 * @see androidx.test.espresso.base.IdlingResourceRegistry.logDuplicateRegistrationError
 	 */
 	override fun getName(): String =
 		"${RecyclerViewScrollingIdlingResource::class.java.simpleName}(${recyclerView.idAsString})@${recyclerView.hashCode()}"

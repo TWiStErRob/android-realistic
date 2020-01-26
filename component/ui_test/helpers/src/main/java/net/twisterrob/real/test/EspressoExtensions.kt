@@ -1,15 +1,15 @@
 package net.twisterrob.real.test
 
-import android.support.annotation.IntRange
-import android.support.test.espresso.ViewInteraction
-import android.support.test.espresso.action.ViewActions
-import android.support.test.espresso.action.ViewActions.closeSoftKeyboard
-import android.support.test.espresso.action.ViewActions.replaceText
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition
-import android.support.test.espresso.matcher.ViewMatchers.withText
-import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.View
+import androidx.annotation.IntRange
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import androidx.test.espresso.ViewInteraction
+import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
+import androidx.test.espresso.action.ViewActions.replaceText
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matcher
 
 fun ViewInteraction.check(viewMatcher: Matcher<View>): ViewInteraction =

@@ -5,7 +5,8 @@ import javax.inject.Inject;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class AboutDomainMapper {
 

@@ -3,7 +3,8 @@ package net.twisterrob.real.about;
 import javax.inject.Inject;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class AboutInteractor {
 
