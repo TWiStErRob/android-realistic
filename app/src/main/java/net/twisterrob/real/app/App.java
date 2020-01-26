@@ -2,7 +2,6 @@ package net.twisterrob.real.app;
 
 import javax.inject.Inject;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
@@ -12,12 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
-import dagger.android.HasActivityInjector;
+import dagger.android.HasAndroidInjector;
 
-public class App extends Application implements HasActivityInjector {
+public class App extends Application implements HasAndroidInjector {
 
 	@Inject
-	DispatchingAndroidInjector<Activity> dispatchingActivityInjector;
+	DispatchingAndroidInjector<Object> dispatchingAndroidInjector;
 
 	@Inject
 	AppComponent appComponent;
@@ -44,7 +43,7 @@ public class App extends Application implements HasActivityInjector {
 	}
 
 	@Override
-	public AndroidInjector<Activity> activityInjector() { // [dagger-android]
-		return dispatchingActivityInjector;
+	public AndroidInjector<Object> androidInjector() { // [dagger-android]
+		return dispatchingAndroidInjector;
 	}
 }
