@@ -4,7 +4,7 @@ import android.app.Application
 import android.app.Instrumentation
 import android.content.Context
 import android.os.Bundle
-import android.support.test.runner.AndroidJUnitRunner
+import androidx.test.runner.AndroidJUnitRunner
 import net.twisterrob.real.app.BuildConfig
 import net.twisterrob.real.test.lifecycle.AppConfigurationApplicationLifecycleCallback
 import net.twisterrob.real.test.lifecycle.IdlingResourcesApplicationLifecycleCallback

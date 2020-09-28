@@ -9,6 +9,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 @get:CheckResult
 val appContext: Context
 	get() = instrumentation.targetContext
+
 @get:CheckResult
 val appResources: Resources
 	get() = appContext.resources
@@ -20,6 +21,7 @@ val instrumentation: Instrumentation
 @get:CheckResult
 val testContext: Context
 	get() = instrumentation.context
+
 @get:CheckResult
 val testResources: Resources
 	get() = testContext.resources

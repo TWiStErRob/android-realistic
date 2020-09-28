@@ -7,6 +7,6 @@ dependencies {
 
 	implementation "com.squareup.okhttp3:mockwebserver:${VERSION_OKHTTP}"
 
-	api "com.android.support.test.espresso:espresso-core:${VERSION_ESPRESSO_CORE}"
-	api "com.android.support.test.espresso:espresso-intents:${VERSION_ESPRESSO_CONTRIB}"
+	api "androidx.test.espresso:espresso-core:${VERSION_ESPRESSO_CORE}"
+	api "androidx.test.espresso:espresso-intents:${VERSION_ESPRESSO_CONTRIB}"
 }

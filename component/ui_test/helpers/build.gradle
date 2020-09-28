@@ -4,10 +4,10 @@ apply from: rootProject.file('gradle/android-setup.gradle')
 dependencies {
 
 	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${VERSION_KOTLIN}"
-	api "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
+	api "androidx.appcompat:appcompat:${VERSION_APPCOMPAT}"
 	api "com.squareup.okhttp3:okhttp:${VERSION_OKHTTP}"
 
-	api "com.android.support.test.espresso:espresso-core:${VERSION_ESPRESSO_CORE}"
-	api "com.android.support.test.espresso:espresso-contrib:${VERSION_ESPRESSO_CONTRIB}"
+	api "androidx.test.espresso:espresso-core:${VERSION_ESPRESSO_CORE}"
+	api "androidx.test.espresso:espresso-contrib:${VERSION_ESPRESSO_CONTRIB}"
 	implementation 'androidx.test:core:1.2.0'
 }

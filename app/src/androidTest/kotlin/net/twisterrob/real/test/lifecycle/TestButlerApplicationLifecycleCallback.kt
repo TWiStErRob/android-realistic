@@ -1,13 +1,13 @@
 package net.twisterrob.real.test.lifecycle
 
 import android.content.Context
-import android.support.test.InstrumentationRegistry
 import com.linkedin.android.testbutler.TestButler
+import net.twisterrob.real.test.appContext
 import net.twisterrob.real.test.instrumentation.ApplicationLifecycleCallback
 import net.twisterrob.real.test.instrumentation.TestApplication
 
 class TestButlerApplicationLifecycleCallback(
-	private val targetContext: Context = InstrumentationRegistry.getTargetContext()
+	private val targetContext: Context = appContext
 ) : ApplicationLifecycleCallback {
 
 	override fun onApplicationStart(app: TestApplication) {

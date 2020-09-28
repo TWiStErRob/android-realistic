@@ -3,7 +3,7 @@ apply from: rootProject.file('gradle/android-setup.gradle')
 
 dependencies {
 	// These annotations will be used by every module, so publish them
-	api "com.android.support:support-annotations:${VERSION_SUPPORT}"
+	api "androidx.annotation:annotation:${VERSION_ANNOTATIONS}"
 	// Added only to make Dagger generated code compile (i.e. not show up as error in IDEA)
 	api 'javax.annotation:jsr250-api:1.0'
 }

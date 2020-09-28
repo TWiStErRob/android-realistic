@@ -5,5 +5,5 @@ dependencies {
 	// propagate :core classes and dependencies to all dependents of :feature:base
 	api project(':core')
 
-	implementation "com.android.support:appcompat-v7:${VERSION_SUPPORT}"
+	implementation "androidx.appcompat:appcompat:${VERSION_APPCOMPAT}"
 }

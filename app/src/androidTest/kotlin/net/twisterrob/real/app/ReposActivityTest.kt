@@ -1,6 +1,6 @@
 package net.twisterrob.real.app
 
-import android.support.test.filters.LargeTest
+import androidx.test.filters.LargeTest
 import net.twisterrob.real.app.repos.RepoEndpoints
 import net.twisterrob.real.app.repos.ReposDSL
 import net.twisterrob.real.test.UiTest

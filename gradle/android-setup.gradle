@@ -1,4 +1,5 @@
 apply plugin: 'kotlin-android' // [kotlin]
+apply plugin: 'kotlin-kapt' // [kotlin]
 
 android {
 	defaultConfig {
@@ -18,9 +19,14 @@ android {
 		test.java.srcDirs += 'src/test/kotlin'
 		androidTest.java.srcDirs += 'src/androidTest/kotlin'
 	}
-	
+
 	if (project.path != ":feature:base") {
 		resourcePrefix "${project.name}_" // [strict-compile]
+	}
+
+	lintOptions {
+		// TODO Centrally disable it, the project is outdated, I know, needs upgrading.
+		disable 'GradleDependency', 'OutdatedLibrary'
 	}
 }
 
